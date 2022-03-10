@@ -1,0 +1,50 @@
+body{
+    background-color: black;
+    color: whitesmoke;
+    max-width:800px;
+    margin: auto;
+    padding-top:100px;
+
+}
+
+form label{
+    margin-right: 15px;
+    font-size: large;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form div{
+    margin-bottom: 20px;
+}
+
+
+#submit{
+    width: 200px;
+    text-align: center;
+    margin-left: 0;
+}
+
+.grades p{
+    background-color: green;
+    color: white;
+    padding:20px;
+    font-size: large;
+}
+
+.grades2 p{
+    background-color: red;
+    color: white;
+    padding:20px;
+    font-size: large;
+}
+
+form h4{
+    font-style: italic;
+    color: lightblue;
+    margin-bottom: 30px;
+}

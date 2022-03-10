@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Grades Tracker</title>
+</head>
+<body>
+    <hr>
+        <h1>University of Aberdeen Grades Tracker</h1>
+
+        {% if grades in good_list %} 
+            <div class="grades">
+                <p>Your current grade is <span>{{grades}}</span> which means you will be graduating with a {{Band_desc}} PGT Award</p>
+            </div>
+        {% elif grades %}
+            <div class="grades2">
+                <p>Your current grade is <span>{{grades}}</span> which means you will be graduating with a {{Band_desc}} PGT Award</p>
+            </div>
+        {% endif %}
+
+        <form action="", method="post">
+            {% csrf_token %}
+            <h4>Please input the final scores for each course in percentage(%)</h4>
+            <div>
+                <label for="intro">CS551N - Introduction to Programming</label>
+                <input type="number" name="intro" min="0" max="100">  
+            </div>
+
+            <div>
+                <label for="adv">CS551P - Advanced Programming</label>
+                <input type="number" name="adv" min="0" max="100">
+            </div>
+            
+            <div>
+                <label for="enterprise">CS551Q - Enterprise software development</label>
+                <input type="number" name="enterprise" min="0" max="100">
+            </div>
+            <div>
+                <label for="pm">CS551A- Fundamental of Software Project Management</label>
+                <input type="number" name="pm" min="0" max="100">
+            </div>
+
+            <input id="submit" type="submit" value="Calculate Grades" name="submit">
+
+
+        </form>
+</body>
+</html>
